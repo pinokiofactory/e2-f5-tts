@@ -8,7 +8,7 @@ module.exports = {
         env: { },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "python app2.py",    // Edit with your custom commands
+          "python gradio_app.py",    // Edit with your custom commands
         ],
         on: [{
           // The regular expression pattern to monitor.
