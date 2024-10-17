@@ -9,6 +9,7 @@ module.exports = {
     let running = {
       install: info.running("install.js"),
       start: info.running("start.js"),
+      train: info.running("train.js"),
       update: info.running("update.js"),
       reset: info.running("reset.js")
     }
@@ -41,6 +42,27 @@ module.exports = {
             href: "start.js",
           }]
         }
+      } else if (running.train) {
+        let local = info.local("train.js")
+        if (local && local.url) {
+          return [{
+            default: true,
+            icon: "fa-solid fa-rocket",
+            text: "Open Finetune UI",
+            href: local.url,
+          }, {
+            icon: 'fa-solid fa-terminal',
+            text: "Terminal",
+            href: "train.js",
+          }]
+        } else {
+          return [{
+            default: true,
+            icon: 'fa-solid fa-terminal',
+            text: "Terminal",
+            href: "train.js",
+          }]
+        }
       } else if (running.update) {
         return [{
           default: true,
@@ -61,6 +83,10 @@ module.exports = {
           icon: "fa-solid fa-power-off",
           text: "Start",
           href: "start.js",
+        }, {
+          icon: "fa-solid fa-dumbbell",
+          text: "Train",
+          href: "train.js",
         }, {
           icon: "fa-solid fa-plug",
           text: "Update",
