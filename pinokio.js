@@ -84,7 +84,7 @@ module.exports = {
           text: "Start",
           href: "start.js",
         }, {
-          icon: "fa-solid fa-power-off",
+          icon: "fa-solid fa-dumbbell",
           text: "Train",
           href: "train.js",
         }, {
