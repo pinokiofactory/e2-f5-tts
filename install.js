@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/SWivid/F5-TTS app",
+          "git clone -b wandb_usability https://github.com/cocktailpeanut/F5-TTS app",
         ]
       }
     },
