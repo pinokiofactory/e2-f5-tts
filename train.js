@@ -8,7 +8,7 @@ module.exports = {
         env: { },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "python finetune_gradio.py",    // Edit with your custom commands
+          "f5-tts_train-gradio"
         ],
         on: [{
           // The regular expression pattern to monitor.
