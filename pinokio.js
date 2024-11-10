@@ -88,6 +88,11 @@ module.exports = {
           text: "Train",
           href: "train.js",
         }, {
+          icon: "fa-solid fa-download",
+          text: "Custom Models",
+          href: "https://huggingface.co/models?sort=modified&search=f5+tts",
+          popout: true
+        }, {
           icon: "fa-solid fa-plug",
           text: "Update",
           href: "update.js",
