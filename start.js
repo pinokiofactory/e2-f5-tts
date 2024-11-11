@@ -6,7 +6,8 @@ module.exports = {
       params: {
         venv: "env",                // Edit this to customize the venv folder path
         env: {
-          "PYTORCH_ENABLE_MPS_FALLBACK": 1
+          "PYTORCH_ENABLE_MPS_FALLBACK": 1,
+          "HF_HUB_ENABLE_HF_TRANSFER": 0
         },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
