@@ -90,7 +90,7 @@ module.exports = {
         }, {
           icon: "fa-solid fa-download",
           text: "Custom Models",
-          href: "https://huggingface.co/modelssearch=f5",
+          href: "https://huggingface.co/models?search=f5",
           popout: true
         }, {
           icon: "fa-solid fa-plug",
