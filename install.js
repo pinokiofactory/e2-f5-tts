@@ -32,11 +32,12 @@ module.exports = {
         ]
       }
     },
-//    {
-//      method: "fs.link",
-//      params: {
-//        venv: "app/env"
-//      }
-//    }
+    {
+      when: "{{platform !== 'linux'}}",
+      method: "fs.link",
+      params: {
+        venv: "app/env"
+      }
+    }
   ]
 }
