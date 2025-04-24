@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  version: "2.0",
+  version: "3.0",
   title: "e2-f5-tts",
   description: "F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching https://huggingface.co/spaces/mrfakename/E2-F5-TTS",
   icon: "icon.png",
@@ -11,7 +11,8 @@ module.exports = {
       start: info.running("start.js"),
       train: info.running("train.js"),
       update: info.running("update.js"),
-      reset: info.running("reset.js")
+      reset: info.running("reset.js"),
+      link: info.running("link.js")
     }
     if (running.install) {
       return [{
@@ -77,6 +78,13 @@ module.exports = {
           text: "Resetting",
           href: "reset.js",
         }]
+      } else if (running.link) {
+        return [{
+          default: true,
+          icon: 'fa-solid fa-terminal',
+          text: "Deduplicating",
+          href: "link.js",
+        }]
       } else {
         return [{
           default: true,
@@ -101,9 +109,15 @@ module.exports = {
           text: "Install",
           href: "install.js",
         }, {
+          icon: "fa-solid fa-file-zipper",
+          text: "<div><strong>Save Disk Space</strong><div>Deduplicates redundant library files</div></div>",
+          href: "link.js",
+        }, {
           icon: "fa-regular fa-circle-xmark",
-          text: "Reset",
+          text: "<div><strong>Reset</strong><div>Revert to pre-install state</div></div>",
           href: "reset.js",
+          confirm: "Are you sure you wish to reset the app?"
+
         }]
       }
     } else {
