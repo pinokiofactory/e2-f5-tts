@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  version: "3.0",
+  version: "3.7",
   title: "e2-f5-tts",
   description: "F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching https://huggingface.co/spaces/mrfakename/E2-F5-TTS",
   icon: "icon.png",
