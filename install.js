@@ -30,7 +30,10 @@ module.exports = {
         message: [
           "uv pip install -e .",
           "uv pip uninstall torchcodec",
-          "uv pip install hf_xet"
+          // transformers >= 5 requires torch.float8_e8m0fnu (torch >= 2.7) at import
+          // time and breaks the torch 2.4.1 platforms (directml/cpu/mac) with
+          // "AttributeError: module 'torch' has no attribute 'float8_e8m0fnu'"
+          "uv pip install hf_xet transformers==4.50.3"
         ]
       }
     },
