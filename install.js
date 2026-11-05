@@ -12,26 +12,34 @@ module.exports = {
       }
     },
     {
-      method: "script.start",
+      when: "{{exists('app/env')}}",
+      method: "fs.rm",
       params: {
-        uri: "torch.js",
-        params: {
-          venv: "env",
-          path: "app",
-          // xformers: true
-        }
+        path: "app/env"
       }
     },
     {
       method: "shell.run",
       params: {
-        venv: "env",
+        venv_python: "3.11",
+        venv: "venv",
         path: "app",
         message: [
           "uv pip install -e .",
           "uv pip uninstall torchcodec",
           "uv pip install hf_xet"
         ]
+      }
+    },
+    {
+      method: "script.start",
+      params: {
+        uri: "torch.js",
+        params: {
+          venv: "venv",
+          path: "app",
+          // xformers: true
+        }
       }
     },
     {

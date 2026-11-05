@@ -5,7 +5,7 @@ module.exports = {
   description: "F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching https://huggingface.co/spaces/mrfakename/E2-F5-TTS",
   icon: "icon.png",
   menu: async (kernel, info) => {
-    let installed = info.exists("app/env")
+    let installed = info.exists("app/venv")
     let running = {
       install: info.running("install.js"),
       start: info.running("start.js"),

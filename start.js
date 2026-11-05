@@ -7,7 +7,7 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        venv: "env",
+        venv: "venv",
         env: {
           "PYTORCH_ENABLE_MPS_FALLBACK": 1,
           "HF_HUB_ENABLE_HF_TRANSFER": 0
