@@ -17,13 +17,9 @@ module.exports = {
       path: "app/env"
     }
   }, {
-    method: "shell.run",
+    method: "script.start",
     params: {
-      venv: "venv",
-      path: "app",
-      message: [
-        "pip install -e ."
-      ]
+      uri: "install.js"
     }
   }]
 }
